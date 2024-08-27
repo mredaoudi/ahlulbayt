@@ -16,11 +16,15 @@
 
 <div class="flex justify-between">
     <div
-        class="flex items-center [&>svg]:size-3.5 gap-2.5 text-muted-foreground"
+        class="flex items-start text-xl gap-2.5 text-muted-foreground"
     >
-        <a class="text-2xl font-semibold hover:underline" href="/quran">Qur'an</a>
-        <Slash />
-        <a class="text-xl font-semibold hover:underline" href={`/quran/${chapterId}`}>{chapter.alpha} - <span class="amiri">{chapter.arabic}</span></a>
+        <a class="font-semibold hover:underline" href="/quran"
+            >Qur'an</a
+        >
+        |
+        <a class="font-semibold hover:underline" href={`/quran/${chapterId}`}>
+            {chapter.alpha} - <span class="amiri">{chapter.arabic}</span>
+        </a>
     </div>
 </div>
 
@@ -49,13 +53,19 @@
 
 <div class="relative flex flex-col w-3/4 xs:w-full border rounded mx-auto">
     <div class="w-full hover:bg-slate-50 p-8 flex flex-col gap-8 text-2xl text-center">
-        <span class="amiri text-3xl">{verse.arabic}</span>
+        <span class="text-3xl amiri-quran">{verse.arabic}</span>
         <span>{verse.english}</span>
     </div>
 </div>
 
 <style>
     .amiri {
-        font-family: Amiri;
+        font-family: 'Amiri';
+        letter-spacing: .5px;
+    }
+    .amiri-quran {
+        font-family: "Amiri Quran";
+        line-height: 3rem;
+        letter-spacing: .5px;
     }
 </style>

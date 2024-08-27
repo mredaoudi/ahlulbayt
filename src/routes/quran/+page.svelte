@@ -44,6 +44,7 @@
 
 <style>
     .amiri {
-        font-family: Amiri;
+        font-family: 'Amiri';
+        letter-spacing: .5px;
     }
 </style>

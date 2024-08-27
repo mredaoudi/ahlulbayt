@@ -16,15 +16,15 @@
 
 <div class="flex justify-between">
     <div
-        class="flex items-center [&>svg]:size-3.5 gap-2.5 text-muted-foreground"
+        class="flex items-start text-xl gap-2.5 text-muted-foreground"
     >
-        <a class="text-2xl font-semibold hover:underline" href="/quran"
+        <a class="font-semibold hover:underline" href="/quran"
             >Qur'an</a
         >
-        <Slash />
-        <span class="text-xl font-semibold text-primary"
-            >{chapter.alpha} - <span class="amiri">{chapter.arabic}</span></span
-        >
+        |
+        <div class="font-semibold text-primary">
+            {chapter.alpha} - <span class="amiri">{chapter.arabic}</span>
+        </div>
     </div>
 </div>
 
@@ -42,12 +42,12 @@
         <div class="flex items-center hover:underline">
             {#if previous }
             <ChevronLeft size="18"/>
-            <a href={`/quran/${nid-1}`}>{previous.alpha} - {previous.arabic}</a>
+            <a href={`/quran/${nid-1}`}>{previous.alpha} - <span class="amiri">{previous.arabic}</span></a>
             {/if}
         </div>
         <div class="flex items-center hover:underline">
             {#if next }
-            <a href={`/quran/${nid+1}`}>{next.alpha} - {next.arabic}</a>
+            <a href={`/quran/${nid+1}`}>{next.alpha} - <span class="amiri">{next.arabic}</span></a>
             <ChevronRight size="18"/>
             {/if}
         </div>
@@ -61,7 +61,7 @@
     {#each verses as v, index }
         <div class="w-full hover:bg-slate-50 px-8 pt-8 pb-2 flex flex-col gap-2 group">
             <span class="text-muted-foreground text-center mb-4">{index+1}</span>
-            <span class="text-right text-xl amiri">{v.arabic}</span>
+            <span class="text-right text-2xl amiri-quran">{v.arabic}</span>
             <span class="text-left">{v.english}</span>
             <div class="mx-auto">
                 <a
@@ -77,6 +77,12 @@
 
 <style>
     .amiri {
-        font-family: Amiri;
+        font-family: 'Amiri';
+        letter-spacing: .5px;
+    }
+    .amiri-quran {
+        font-family: "Amiri Quran";
+        line-height: 3rem;
+        letter-spacing: .5px;
     }
 </style>

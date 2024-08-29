@@ -1,6 +1,6 @@
 <script>
     import { page } from "$app/stores";
-    import { Slash, ChevronRight, ChevronLeft } from "lucide-svelte";
+    import { ChevronRight, ChevronLeft } from "lucide-svelte";
     export let data;
 
     $: quran = data.quran;
@@ -14,6 +14,11 @@
 
 </script>
 
+<svelte:head>
+    <title>Ahlulbayt.io | Quran {chapterId}:{verseId}</title>
+</svelte:head>
+
+<main class="flex flex-1 flex-col gap-4 lg:gap-6 p-4 lg:p-6">
 <div class="flex justify-between">
     <div
         class="flex items-start text-xl gap-2.5 text-muted-foreground"
@@ -28,7 +33,7 @@
     </div>
 </div>
 
-<div class="flex flex-col mx-auto text-center w-3/4">
+<div class="flex flex-col mlg:mx-auto text-center mlg:w-3/4">
     <div class="text-xl font-bold">
         {chapter.english}
     </div>
@@ -51,12 +56,13 @@
     </div>
 </div>
 
-<div class="relative flex flex-col w-3/4 xs:w-full border rounded mx-auto">
-    <div class="w-full hover:bg-slate-50 p-8 flex flex-col gap-8 text-2xl text-center">
-        <span class="text-3xl amiri-quran">{verse.arabic}</span>
-        <span>{verse.english}</span>
+<div class="relative flex flex-col mlg:w-3/4 border rounded mx-auto">
+    <div class="w-full hover:bg-slate-50 p-8 flex flex-col gap-8 text-center">
+        <span class="text-base xl:text-3xl amiri-quran">{verse.arabic}</span>
+        <span class="text-sm xl:text-2xl">{verse.english}</span>
     </div>
 </div>
+</main>
 
 <style>
     .amiri {

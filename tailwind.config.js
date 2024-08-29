@@ -1,11 +1,17 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
 
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 const config = {
 	darkMode: ["class"],
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	safelist: ["dark"],
 	theme: {
+    screens: {
+      "mlg": "1080px",
+      ...defaultTheme.screens,
+    },
 		container: {
 			center: true,
 			padding: "2rem",
@@ -15,6 +21,8 @@ const config = {
 		},
 		extend: {
 			colors: {
+        yeller: "#F9DBBB",
+        bluer: "#4E6E81",
 				border: "hsl(var(--border) / <alpha-value>)",
 				input: "hsl(var(--input) / <alpha-value>)",
 				ring: "hsl(var(--ring) / <alpha-value>)",

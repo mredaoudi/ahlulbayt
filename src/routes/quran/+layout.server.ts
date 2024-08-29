@@ -10,8 +10,6 @@ export const load: LayoutServerLoad = async ({fetch}) => {
     };
   }
 
-  console.log(res)
-
   return {
     status: res.status,
     error: 'Something went wrong'

@@ -34,6 +34,10 @@
         <span class="text-2xl font-semibold">Tools & Apps</span>
     </div>
 
+    <div class="text-muted-foreground mx-auto text-center">
+        Get a real compass, write you city below, click on the button and then face your prayers to the direction on the compass.
+    </div>
+
     <div class="mb-4 mx-auto">
         <div class="flex w-full max-w-sm items-center flex-col gap-1.5">
             <div class="flex gap-2">
@@ -45,13 +49,13 @@
 
     {#key direction }
     <div class="mx-auto relative font-mono font-bold text-lg">
-        <img src="/cc.svg" alt="Compass" class="w-1/3 fill-muted-foreground absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+        <img src="/compass.svg" alt="Compass" class="w-1/3 fill-muted-foreground absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
         <div class="rounded-full w-48 h-48 md:w-96 md:h-96 border-bluer border-2 border-dashed ring-2 ring-bluer "></div>
         <span class="text-bluer absolute -top-6 left-1/2 -translate-x-1/2 text-center">N</span>
         <span class="text-bluer absolute top-1/2 -right-4 -translate-y-1/2">E</span>
         <span class="text-bluer absolute -bottom-6 right-1/2 translate-x-1/2">S</span>
         <span class="text-bluer absolute bottom-1/2 -left-4 translate-y-1/2">W</span>
-        <div id="arrow" class="absolute bottom-1/2 border right-1/2 rounded-full h-1/2 origin-bottom border-red-500" style="transform: rotate({direction}deg);"></div>
+        <div id="arrow" class="absolute bottom-1/2 border right-1/2 rounded-full h-1/2 origin-bottom border-red-500" style="transform: rotate({direction}deg); transition: transform 2s ease-in-out;"></div>
     </div>
     {/key}
 

@@ -10,7 +10,10 @@
     } from "lucide-svelte";
     import { Button } from "$lib/components/ui/button/index.js";
     import * as Sheet from "$lib/components/ui/sheet/index.js";
-    import { page } from "$app/stores";
+    import { page, navigating } from "$app/stores";
+
+    let open = false;
+    $: if ($navigating) open = false;
 
     let loading = false;
     beforeNavigate(() => {
@@ -31,11 +34,11 @@
 </script>
 
 <div
-    class="grid min-h-screen w-full md:grid-cols-[100px_1fr] lg:grid-cols-[180px_1fr]"
+    class="grid min-h-screen w-full md:grid-cols-[120px_1fr]"
 >
     <div class="bg-muted/40 hidden border-r md:block">
         <div class="flex h-full sticky top-0 max-h-screen flex-col gap-2">
-            <div class="flex items-center border-b p-8 lg:px-6">
+            <div class="flex items-center border-b p-6">
                 <a
                     href="/"
                     class="w-full flex flex-col items-center gap-1 font-semibold justify-center reem-kufi text-bluer"
@@ -80,7 +83,7 @@
                             : 'text-muted-foreground'} hover:text-primary flex flex-col text-center items-center gap-3 rounded-lg px-3 py-2 transition-all"
                     >
                         <PencilRuler class="h-5 w-5" />
-                        Tools & Apps
+                        Tools
                     </a>
                 </nav>
             </div>
@@ -88,9 +91,9 @@
     </div>
     <div class="flex flex-col">
         <header
-            class="bg-muted/40 flex h-14 items-center gap-4 border-b px-4 lg:h-[60px] lg:px-6 shrink-0 md:hidden"
+            class="bg-muted/40 flex h-14 items-center justify-between gap-4 border-b px-4 lg:h-[60px] lg:px-6 shrink-0 md:hidden mb-2"
         >
-            <Sheet.Root>
+            <Sheet.Root bind:open>
                 <Sheet.Trigger asChild let:builder>
                     <Button
                         variant="outline"
@@ -103,6 +106,10 @@
                     </Button>
                 </Sheet.Trigger>
                 <Sheet.Content side="left" class="flex flex-col">
+                    <div class="flex gap-2 justify-center reem-kufi text-[#4E6E81]">
+                        Ahlulbayt.io
+                        <img class="w-6" src="/ahlulbayt.svg" alt="mobile" />
+                    </div>
                     <nav class="grid gap-2 text-lg font-medium">
                         <a
                             href="##"
@@ -144,12 +151,15 @@
                                 : 'text-muted-foreground'} hover:text-foreground mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2"
                         >
                             <PencilRuler class="h-5 w-5" />
-                            Tools & Apps
+                            Tools
                         </a>
                     </nav>
                 </Sheet.Content>
             </Sheet.Root>
-            <div class="w-full flex justify-center reem-kufi text-[#4E6E81]"><img class="w-6" src="/ahlulbayt.svg" alt="mobile" /></div>
+            <a class="flex gap-2 justify-center reem-kufi text-[#4E6E81]" href="/">
+                Ahlulbayt.io
+                <img class="w-6" src="/ahlulbayt.svg" alt="mobile" />
+            </a>
             <!-- <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild let:builder>
             <Button

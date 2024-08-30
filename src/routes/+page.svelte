@@ -3,15 +3,15 @@
 </svelte:head>
 
 <main class="grid grid-cols-1 justify-items-center gap-4 lg:gap-6">
-    <img src="/banner_white.svg" alt="Banner" class="w-1/2 object-scale-down max-h-full" />
+    <img src="/banner_white.svg" alt="Banner" class="hidden sm:block w-1/2 object-scale-down max-h-full" />
 
-    <div class="mlg:text-xl font-semibold">
+    <div class="mt-2 mlg:text-xl font-semibold">
         Welcome to the Ahlulbayt.io network.
     </div>
-    <div class="w-1/2 text-center text-sm mlg:text-base">
+    <div class="w-3/4 sm:w-1/2 text-center text-sm mlg:text-base">
         Explore the wisdom of the Quran, Hadith, and Fiqh of the Prophet <span class="amiri">{'\uFDFA'}</span> and his Household at your fingertips. Dive deep into timeless knowledge with tools designed to enhance your understanding and spiritual journey.
     </div>
-    <div class="w-1/2 grid mlg:grid-cols-2 xl:grid-cols-4 gap-2 text-center">
+    <div class="w-3/4 sm:w-1/2 grid mlg:grid-cols-2 xl:grid-cols-4 gap-2 text-center">
         <a class="p-4 border hover:underline rounded" href="/quran">Qur'an</a>
         <a class="p-4 border hover:underline rounded" href="/hadith">Hadith</a>
         <a class="p-4 border hover:underline rounded" href="/fiqh">Fiqh</a>

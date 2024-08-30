@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <div class="mx-auto mt-12 text-xl font-bold">Apps</div>
+    <div class="mx-auto mt-12 text-xl font-bold">Recommended Apps</div>
     <div class="mx-auto w-3/4 grid sm:grid-cols-3 gap-4">
         <a class="flex flex-col items-center justify-center gap-2 text-muted-foreground hover:text-foreground border rounded p-5 hover:border-slate-500 hover:bg-slate-50 shadow hover:shadow-none" href="https://play.google.com/store/apps/details?id=com.qadaa&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
             <img class="h-20 rounded" src="/qadaa.jpg" alt="Qadaa" />

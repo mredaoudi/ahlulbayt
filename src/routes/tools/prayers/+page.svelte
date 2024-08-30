@@ -80,6 +80,10 @@
     }
 </script>
 
+<svelte:head>
+    <title>Ahlulbayt.io | Tools | Prayers Timetable</title>
+</svelte:head>
+
 <main class="flex flex-1 flex-col gap-4 lg:gap-6 p-4 lg:p-6">
     <div class="flex justify-between">
         <span class="text-2xl font-semibold"

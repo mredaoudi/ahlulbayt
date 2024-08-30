@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Ahlulbayt.io | Hadith</title>
+</svelte:head>
+
 <div class="mx-auto my-auto text-center text-3xl text-muted-foreground flex flex-col gap-2">
     Coming soon
     <div class="text-lg">

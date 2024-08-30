@@ -1,4 +1,7 @@
 
+<svelte:head>
+    <title>Ahlulbayt.io | Fiqh</title>
+</svelte:head>
 
 <main class="flex flex-1 flex-col gap-4 lg:gap-6 p-4 lg:p-6">
     <div class="flex justify-between">

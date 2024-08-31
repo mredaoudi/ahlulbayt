@@ -8,13 +8,20 @@
         <span class="text-2xl font-semibold">Fiqh - Jurisprudence</span>
     </div>
 
+    <div class="mx-auto text-center text-3xl text-muted-foreground flex flex-col gap-2">
+        Coming soon
+        <div class="text-lg">
+            In the meantime you can visit the sites of the maraji' below:
+        </div>
+    </div>
+
     <div class="mx-auto mt-12 lg:w-1/2 grid mlg:grid-cols-2 gap-6 font-bold text-center">
         <a class="flex flex-col items-center gap-4 text-muted-foreground hover:text-foreground border rounded p-5 hover:border-slate-500 hover:bg-slate-50 shadow hover:shadow-none" href="https://leader.ir" target="_blank" rel="noopener noreferrer">
-            <img class="h-24 rounded-full" src="/khamenei.png" alt="Khamenei" />
+            <img class="h-24 rounded-full" src="/images/khamenei.png" alt="Khamenei" />
             Grand Ayatollah Sayyid Ali Hosseini Khamenei
         </a>
         <a class="flex flex-col items-center gap-4 text-muted-foreground hover:text-foreground border rounded p-5 hover:border-slate-500 hover:bg-slate-50 shadow hover:shadow-none" href="https://sistani.org" target="_blank" rel="noopener noreferrer">
-            <img class="h-24 rounded-full" src="/sistani.png" alt="Sistani" />
+            <img class="h-24 rounded-full" src="/images/sistani.png" alt="Sistani" />
             Grand Ayatollah Sayyid Ali Hosseini Sistani
         </a>
     </div>

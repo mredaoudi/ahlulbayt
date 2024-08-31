@@ -49,7 +49,7 @@
 
     {#key direction }
     <div class="mx-auto relative font-mono font-bold text-lg">
-        <img src="/compass.svg" alt="Compass" class="w-1/3 fill-muted-foreground absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+        <img src="/images/compass.svg" alt="Compass" class="w-1/3 fill-muted-foreground absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
         <div class="rounded-full w-48 h-48 md:w-96 md:h-96 border-bluer border-2 border-dashed ring-2 ring-bluer "></div>
         <span class="text-bluer absolute -top-6 left-1/2 -translate-x-1/2 text-center">N</span>
         <span class="text-bluer absolute top-1/2 -right-4 -translate-y-1/2">E</span>

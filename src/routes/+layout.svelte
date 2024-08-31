@@ -43,7 +43,7 @@
                     href="/"
                     class="w-full flex flex-col items-center gap-1 font-semibold justify-center reem-kufi text-bluer"
                 >
-                    <img src="/ahlulbayt.svg" alt="Logo" class="h-16"/>
+                    <img src="/images/ahlulbayt.svg" alt="Logo" class="h-16"/>
                     <span>Ahlulbayt.io</span>
                 </a>
             </div>
@@ -55,7 +55,7 @@
                             ? 'bg-muted text-primary'
                             : 'text-muted-foreground'} hover:text-primary flex flex-col items-center gap-3 rounded-lg p-3 transition-all"
                     >
-                        <img class="w-6 h-6" src="/quran.svg" alt="Quran"/>
+                        <img class="w-6 h-6" src="/images/quran.svg" alt="Quran"/>
                         Qur'an
                     </a>
                     <a
@@ -108,7 +108,7 @@
                 <Sheet.Content side="left" class="flex flex-col">
                     <div class="flex gap-2 justify-center reem-kufi text-[#4E6E81]">
                         Ahlulbayt.io
-                        <img class="w-6" src="/ahlulbayt.svg" alt="mobile" />
+                        <img class="w-6" src="/images/ahlulbayt.svg" alt="mobile" />
                     </div>
                     <nav class="grid gap-2 text-lg font-medium">
                         <a
@@ -158,7 +158,7 @@
             </Sheet.Root>
             <a class="flex gap-2 justify-center reem-kufi text-[#4E6E81]" href="/">
                 Ahlulbayt.io
-                <img class="w-6" src="/ahlulbayt.svg" alt="mobile" />
+                <img class="w-6" src="/images/ahlulbayt.svg" alt="mobile" />
             </a>
             <!-- <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild let:builder>

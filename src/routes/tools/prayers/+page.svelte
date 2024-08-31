@@ -91,6 +91,10 @@
         >
     </div>
 
+    <div class="text-center text-red-500">
+        This tool is still a work in progress. Some prayer times are <span class="font-bold">not correct</span>. Do not use this timetable for you prayers yet.
+    </div>
+
     <div class="flex mb-2 mx-auto items-center">
         <div class="flex flex-col w-full max-w-sm items-center gap-2">
             <Input id="city" placeholder="City" name="city" bind:value={city} />
@@ -131,7 +135,7 @@
             class="grid grid-cols-[1fr,2fr,1fr] justify-between items-center rounded-t-md p-4 bg-bluer text-yeller"
         >
             <div class="flex gap-2 items-center">
-                <img class="w-8" src="/ahlulbayt.svg" alt="Ahlulbayt" />
+                <img class="w-8" src="/images/ahlulbayt.svg" alt="Ahlulbayt" />
                 <span>Prayers | الصّلاة</span>
             </div>
             <span class="text-xl text-center font-semibold">{display_date}</span>

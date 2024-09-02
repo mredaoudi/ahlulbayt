@@ -1,4 +1,7 @@
 <script lang="ts">
+    import { goto } from '$app/navigation';
+    import { Shuffle } from 'lucide-svelte';
+
     export let data;
     const quran = data.quran;
     const chapters = Object.entries(quran).map(
@@ -11,6 +14,12 @@
             versesLen: value.verses.length
         }),
     );
+
+    function gotoRandomVerse() {
+        const randomChapter = chapters[Math.floor(Math.random() * chapters.length)];
+        const randomAyah = Math.floor(Math.random() * (randomChapter.versesLen - 1) + 1)
+        goto(`/quran/${randomChapter.id}/${randomAyah}`)
+    }
 </script>
 
 <svelte:head>
@@ -20,6 +29,13 @@
 <main class="flex flex-1 flex-col gap-4 lg:gap-6 p-4 lg:p-6">
     <div class="flex justify-between">
         <span class="text-2xl font-semibold">Qur'an</span>
+    </div>
+
+    <div class="mx-auto">
+        <button on:click={() => gotoRandomVerse()} class="flex gap-2 border p-2 text-muted-foreground hover:border-slate-500 mb-2 rounded hover:text-slate-500">
+            <Shuffle class="w-5"/>
+            Go to random verse
+        </button>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 mlg:grid-cols-3 xl:grid-cols-4 items-center justify-center gap-2 w-full">

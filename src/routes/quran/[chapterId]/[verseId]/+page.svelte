@@ -34,6 +34,9 @@
 </div>
 
 <div class="flex flex-col mlg:mx-auto text-center mlg:w-3/4">
+    <div class="text-2xl">
+        {chapter.alpha}
+    </div>
     <div class="text-xl font-bold">
         {chapter.english}
     </div>
